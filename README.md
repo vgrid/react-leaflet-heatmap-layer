@@ -1,4 +1,4 @@
-# react-leaflet-heatmap-layer
+# @vgrid/react-leaflet-heatmap-layer
 
 `react-leaflet-heatmap-layer` provides a simple `<HeatmapLayer />` component for creating a heatmap layer in a `react-leaflet` map.
 
@@ -6,14 +6,18 @@
 
 ## Usage
 
+This fork changes the behaviour to export a factory function, so that the types can be turned into a generic
+
 Use directly as a fixed layer:
 
-```js
+```typescript
 import React from 'react';
 import { render } from 'react-dom';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import HeatmapLayer from '../src/HeatmapLayer';
+import HeatmapLayerFactory from '../src/HeatmapLayer';
 import { addressPoints } from './realworld.10000.js';
+
+const HeatmapLayer = HeatmapLayerFactory<[number, number, number]>()
 
 class MapExample extends React.Component {
 
@@ -44,12 +48,14 @@ render(<MapExample />, document.getElementById('app'));
 
 Or use it inside a layer control to toggle it:
 
-```js
+```typescript
 import React from 'react';
 import { render } from 'react-dom';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import HeatmapLayer from '../src/HeatmapLayer';
+import HeatmapLayerFactory from '../src/HeatmapLayer';
 import { addressPoints } from './realworld.10000.js';
+
+const HeatmapLayer = HeatmapLayerFactory<[number, number, number]>()
 
 class MapExample extends React.Component {
 
@@ -122,15 +128,6 @@ The `HeatmapLayer` component takes the following props:
 - `onStatsUpdate`: called on redraw with a { min, max } object containing:
   - The local minimum intensity in the viewport
   - The local maximum intensity in the viewport
-
-## Example
-
-To try the example:
-
-1. Clone this repository
-2. run `npm install` in the root of your cloned repository
-3. run `npm run example`
-4. Visit [localhost:8000](http://localhost:8000)
 
 ## Contributing
 

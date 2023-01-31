@@ -1,3 +1,6 @@
+# 3.0.0 Release
+- react-leaflet v3.x support.  For react-leaflet v2.x please use react-leaflet-heatmep-layer v2.x.
+
 # 2.0.0 Release
 - React-leaflet v2.x support. For react-leaflet v1.x please use react-leaflet-heatmep-layer v1.x.
 

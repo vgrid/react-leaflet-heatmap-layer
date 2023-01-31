@@ -1,76 +1,42 @@
 {
-  "extends": ["eslint-config-airbnb", "plugin:flowtype/recommended", "prettier"],
-  "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "mocha": true,
-    "node": true
+    "es6": true
   },
-  "globals": {
-    "__data": true,
-    "expect": true,
-    "ga": true,
-    "Intercom": true,
-    "spy": true,
-    "sinon": true,
-    "Raven": true,
-    "Highcharts": true
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "jsx": true,
+    "sourceType": "module"
   },
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
   "rules": {
-    "comma-dangle": 0,
-    "no-wrap-func": 0,
-    "spaced-comment": 0,
-    "eqeqeq": [2, "smart"],
-
-    // Portal uses some camelcase
-    "camelcase": 1,
-
-    // used for creating new Immutable Lists and Maps
-    "new-cap": [1, { "capIsNewExceptions": ["Immutable"] }],
-
-    // Sometimes short variable names are okay
-    "id-length": 0,
-
-    // Doesn't play nice with chai's assertions
-    "no-unused-expressions": 0,
-
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2,
-    "react/jsx-no-duplicate-props": 2,
-
-    // Discourages microcomponentization
-    "react/no-multi-comp": 0,
-
-    //Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
-    "block-scoped-var": 0,
-    // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
-    "padded-blocks": 0,
-    "no-param-reassign": 0,
-
-    // Allow ++ and --
-    "no-plusplus": "off",
-
-    // Allow dangling underscores
-    "no-underscore-dangle": "off",
-
-    "import/no-extraneous-dependencies": [
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "prettier/prettier": [
       "error",
       {
-        "devDependencies": true
+        "jsxBracketSameLine": true,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "all"
       }
     ],
-
-    // Left as-is since this is overkill
-    "class-methods-use-this": "off",
-
-    // Any prettier issues are now considered eslint issues
-    "prettier/prettier": ["error"],
-
-    // This is because we use `array` and `object`.
-    // `array` is ok because we require latitude, longitude and intensity extractors
-    // `object` is used with the gradient object, and proptypes can't encode the shape of a gradient correctly
-    "react/forbid-prop-types": "off"
+    "react/prop-types": "warn"
   },
-  "plugins": ["react", "lean-imports", "flowtype", "prettier"]
+  "settings": {
+    "react": {
+      "version": "17.0"
+    }
+  }
 }

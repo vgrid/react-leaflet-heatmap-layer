@@ -5,8 +5,8 @@ import Heatmap, { HeatmapOptions } from './Heatmap'
 
 export type HeatmapLayerProps<Point> = HeatmapOptions<Point>
 
-const HeatmapLayer = (<Point>() =>
-  createLayerComponent<Heatmap<Point>, HeatmapLayerProps<Point>>(
+function HeatmapLayerFactory<Point>() {
+  return createLayerComponent<Heatmap<Point>, HeatmapLayerProps<Point>>(
     function createHeatmapLayer(props, context) {
       const instance = new Heatmap(props)
       return { instance, context }
@@ -45,6 +45,7 @@ const HeatmapLayer = (<Point>() =>
 
       instance.reset()
     },
-  ))()
+  )
+}
 
-export default HeatmapLayer
+export default HeatmapLayerFactory

@@ -8,7 +8,7 @@ export type HeatmapLayerProps<Point> = HeatmapOptions<Point>
 function HeatmapLayerFactory<Point>() {
   return createLayerComponent<Heatmap<Point>, HeatmapLayerProps<Point>>(
     function createHeatmapLayer(props, context) {
-      const instance = new Heatmap(props)
+      const instance: Heatmap<Point> = new Heatmap(props)
       return { instance, context }
     },
     function updateHeatmapLayer(

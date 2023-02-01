@@ -1,6 +1,6 @@
 {
   "name": "@vgrid/react-leaflet-heatmap-layer",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "A custom layer for heatmaps in react-leaflet",
   "main": "cjs/index.js",
   "module": "esm/index.js",

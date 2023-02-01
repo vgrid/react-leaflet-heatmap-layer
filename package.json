@@ -22,7 +22,8 @@
     "build:cjs": "babel src --out-dir cjs --extensions .ts,.tsx",
     "build:esm": "cross-env BABEL_ENV=esm babel src --out-dir esm --extensions .ts,.tsx",
     "build:types": "tsc --emitDeclarationOnly",
-    "build": "yarn run build:clean && yarn run build:cjs && yarn run build:esm && yarn run build:types"
+    "build": "yarn run build:clean && yarn run build:cjs && yarn run build:esm && yarn run build:types",
+    "prepack": "yarn run build"
   },
   "repository": {
     "type": "git",

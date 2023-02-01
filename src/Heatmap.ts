@@ -1,6 +1,6 @@
 import * as L from 'leaflet'
-/// <reference path="types.d.ts"/>
-import SimpleHeat, { Gradient } from 'simpleheat'
+/// <reference path="simpleheat.d.ts"/>
+import SimpleHeat, { Gradient } from '@vgrid/simpleheat'
 
 export { SimpleHeat, Gradient }
 

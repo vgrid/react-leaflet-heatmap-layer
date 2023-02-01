@@ -1586,6 +1586,11 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
+"@vgrid/simpleheat@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@vgrid/simpleheat/-/simpleheat-0.5.0.tgz#5472a379711f16a2a55727c0b03e20ff3420d1be"
+  integrity sha512-OXw+jBCAD2j2Oj/+sp/VtYOEr+sB+BR2C3wuFHoOh0ARfOIJeILM/B0CAObJDo2LBSGoppy+Qlih05cdFfPc0A==
+
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.6.tgz#41b80f2c871d19686216b82309231cfd3cb3d291"
@@ -5307,11 +5312,6 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
-
-simpleheat@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/simpleheat/-/simpleheat-0.4.0.tgz#e2de8d4548fcf1a6960b636bfa939d05bcd49a7b"
-  integrity sha512-tdg3I1NvzMdPKscWBrHbF0LBf+VWuBBazzGUPtFJjG5Q12VQX6gPY8jLy9hx5CbgAIVc5nfnePwJvAYK6z1rAA==
 
 sisteransi@^1.0.5:
   version "1.0.5"
